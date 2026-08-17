@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="page-transition"></div>
+
+    <nav class="navbar">
+        <div class="logo">MBEKE MUTUA</div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="biography.html">My Biography</a></li>
+            <li><a href="skills.html">Skills</a></li>
+            <li><a href="education.html">Education</a></li>
+            <li><a href="experience.html">Experience</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="documents.html">Documents</a></li>
+        </ul>
+    </nav>
+
+    <section class="glass section">
+
+        <h1>Contact Me</h1>
+        <p>If you'd like to work together or have a question, send a quick message below or reach me on social media.
+        </p>
+
+        <form id="contactForm">
+            <input type="text" name="name" placeholder="Your name" required>
+            <input type="email" name="email" placeholder="Your email" required>
+            <input type="tel" name="phone" placeholder="Phone (optional)">
+            <input type="text" name="subject" placeholder="Subject">
+            <textarea name="message" placeholder="Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+
+        <!-- Social links: replace the href values below with your profile URLs. Each link opens in a new tab. -->
+        <div class="socials">
+            <a class="social-link" href="#" target="_blank" rel="noopener">Facebook</a>
+            <a class="social-link" href="#" target="_blank" rel="noopener">LinkedIn</a>
+            <a class="social-link" href="#" target="_blank" rel="noopener">GitHub</a>
+            <a class="social-link" href="#" target="_blank" rel="noopener">Twitter</a>
+            <a class="social-link" href="#" target="_blank" rel="noopener">WhatsApp</a>
+            <a class="social-link" href="#" target="_blank" rel="noopener">Instagram</a>
+            <a class="social-link" href="#" target="_blank" rel="noopener">TikTok</a>
+            <a class="social-link" href="#" target="_blank" rel="noopener">YouTube</a>
+        </div>
+
+    </section>
+
+    <!-- Modal for contact feedback -->
+    <div id="contactModal" class="modal" aria-hidden="true">
+        <div class="modal-content" role="dialog" aria-labelledby="modalTitle" aria-describedby="modalMessage">
+            <button class="modal-close" id="modalClose" aria-label="Close">&times;</button>
+            <h2 id="modalTitle"></h2>
+            <p id="modalMessage"></p>
+        </div>
+    </div>
+    <script>
+        // Default to Formspree so the contact form works immediately after you add your form ID.
+        // If you want SMTP delivery instead, replace the placeholder below with a valid SMTPJS SecureToken.
+        window.CONTACT_CONFIG = {
+            mode: 'formspree', // 'formspree' or 'smtp'
+            formspreeEndpoint: 'https://formspree.io/f/your_form_id_here',
+            smtp: {
+                SecureToken: '',
+                To: 'mutuacinia52@gmail.com',
+                From: 'mutuacinia52@gmail.com'
+            },
+            notifyEmail: 'mutuacinia52@gmail.com'
+        };
+    </script>
+    <script src="script.js"></script>
+</body>
+
+</html>
